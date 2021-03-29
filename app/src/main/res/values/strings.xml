@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CheckUpdateAndDownload</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="permission_install_failed_pro">申请安装权限失败，暂不能安装更新文件</string>
+    <string name="permission_install_content_pro">安装应用需要打开未知来源权限，请去设置中开启权限</string>
+
+</resources>
