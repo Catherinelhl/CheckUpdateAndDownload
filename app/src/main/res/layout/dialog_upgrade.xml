@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="27dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="27dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineLeftInner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="64dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineRightInner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="64dp" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.23" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.36" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <ImageView
+            android:id="@+id/ivDialogBg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/personal_bg_upgrade_dialog"
+            app:layout_constraintBottom_toBottomOf="@id/guideLineBottom"
+            app:layout_constraintLeft_toLeftOf="@+id/guideLineLeft"
+            app:layout_constraintRight_toRightOf="@+id/guideLineRight"
+            app:layout_constraintTop_toTopOf="@id/guideLineTop" />
+
+
+        <TextView
+            android:id="@+id/tvUpgradeTitle"
+            style="@style/DialogTitleTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/guideLineRightInner"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeftInner"
+            app:layout_constraintTop_toTopOf="@id/ivDialogBg"
+            tools:text="@string/update_title" />
+
+        <TextView
+            android:id="@+id/tvUpgradeContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:textColor="@color/color_black_333333"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/btnUpgradeRightNow"
+            app:layout_constraintEnd_toEndOf="@+id/guideLineRightInner"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeftInner"
+            app:layout_constraintTop_toTopOf="@id/guideLineTitle"
+            tools:text="1、专为云顶之弈、\n英雄联盟手游设计的拳头\n账号注册功能上线！注\n册加速一步到位！\n2、修复了一些小小小bug~" />
+
+        <Button
+            android:id="@+id/btnUpgradeRightNow"
+            style="@style/dialog_button_style"
+            android:layout_marginBottom="14dp"
+            android:text="@string/update_text"
+            app:layout_constraintBottom_toTopOf="@id/btnUpgradeCancel"
+            app:layout_constraintLeft_toLeftOf="@id/tvUpgradeContent"
+            app:layout_constraintRight_toRightOf="@id/tvUpgradeContent" />
+
+        <Button
+            android:id="@+id/btnUpgradeCancel"
+            style="@style/dialog_button_stroke_style"
+            android:layout_marginBottom="14dp"
+            android:text="@string/update_later"
+            app:layout_constraintBottom_toTopOf="@id/vSpace"
+            app:layout_constraintLeft_toLeftOf="@id/btnUpgradeRightNow"
+            app:layout_constraintRight_toRightOf="@id/btnUpgradeRightNow"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <View
+            android:id="@+id/vSpace"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivDialogBg"
+            app:layout_constraintLeft_toLeftOf="@id/btnUpgradeRightNow"
+            app:layout_constraintRight_toRightOf="@id/btnUpgradeRightNow" />
+
+        <com.yf.accelerator.update.view.TextFollowingProgressBar
+            android:id="@+id/nbpProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:paddingTop="25dp"
+            android:progressDrawable="@drawable/personal_download_progress_bar"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ivDialogBg"
+            app:layout_constraintEnd_toEndOf="@+id/guideLineRightInner"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeftInner"
+            app:layout_constraintTop_toBottomOf="@id/tvUpgradeContent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

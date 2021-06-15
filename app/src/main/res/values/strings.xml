@@ -12,5 +12,18 @@
 
     <string name="permission_install_failed_pro">申请安装权限失败，暂不能安装更新文件</string>
     <string name="permission_install_content_pro">安装应用需要打开未知来源权限，请去设置中开启权限</string>
+    <string name="update_permission" translatable="false">请授权访问存储空间权限，更新后更流畅哦</string>
+    <string name="update_title" translatable="false">发现新版本 </string>
+    <string name="update_version" translatable="false"> \t V%1$s</string>
+    <string name="update_size" translatable="false">新版本大小：%1$s</string>
+    <string name="update_content" translatable="false">1.用户体验优化\n2.部分问题修复</string>
+    <string name="update_force_tip" translatable="false">你需要更新应用才能继续使用</string>
+    <string name="down_cancel" translatable="false">取消更新</string>
+    <string name="down_browser" translatable="false">浏览器下载</string>
+    <string name="update_text" translatable="false">立即更新</string>
+    <string name="update_later" translatable="false">稍后更新</string>
+    <string name="update_retry" translatable="false">重 试</string>
+    <string name="update_exit" translatable="false">取 消</string>
+    <string name="default_update_content" translatable="false">1.用户体验优化\n2.性能优化\n3.bug修复</string>
 
 </resources>
